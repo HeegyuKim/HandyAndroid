@@ -15,7 +15,7 @@ import android.widget.Toast;
 import java.lang.reflect.Field;
 
 /**
- * Created by ±èÈñ±Ô on 2015-07-30.
+ * Created by ï¿½ï¿½ï¿½ï¿½ï¿½ on 2015-07-30.
  */
 public class Handy
 {
@@ -33,16 +33,19 @@ public class Handy
     public Handy(View view)
     {
         this.view = view;
+        context = view.getContext();
     }
 
     public Handy(Activity activity)
     {
         view = activity.findViewById(android.R.id.content);
+        context = activity;
     }
 
     public Handy(Fragment fragment)
     {
         view = fragment.getView();
+        context = fragment.getActivity();
     }
 
 
